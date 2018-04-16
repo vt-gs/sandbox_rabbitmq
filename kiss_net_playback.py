@@ -125,7 +125,7 @@ def main():
         while repeat:
             repeat = args.repeat
             for i,f in enumerate(kiss_frames):
-                print i, binascii.hexlify(f)
+                print i, " " , datetime.datetime.now(), "\t", binascii.hexlify(f)
                 try:
                     conn.sendall(bytearray(f))
                 except socket.error, v:
